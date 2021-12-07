@@ -1,0 +1,29 @@
+body {
+    background: palevioletred;
+    padding: 15px;
+}
+.margin-bottom {
+    margin-bottom: 20px;
+}
+.identification {
+    background: #33C3F0;
+    min-height: 20vh;
+}
+.bandeau {
+    background: tomato;
+    min-height: 40vh;
+}
+.footer {
+    background: goldenrod;
+}
+.main {
+    background: saddlebrown;
+}
+.recherche {
+    background: firebrick;
+    min-height: 20vh;
+}
+.service {
+    background: crimson;
+    min-height: 80vh;
+}
