@@ -19,16 +19,16 @@
 <body>
 <div class="row">
     <div class="three columns ">
-        <div class="identification margin-bottom"> {% block identification %} Identification {% endblock %} </div>
-        <div class="service margin-bottom"> {% block service %} Catégorie de service {% endblock %} </div>
+        <section class="identification section"> {% block identification %} Identification {% endblock %} </section>
+        <section class="service section"> {% block service %} Catégorie de service {% endblock %} </section>
     </div>
     <div class="nine columns ">
-        <div class="bandeau margin-bottom">
+        <section class="bandeau section">
         {% block bandeau %} Bandeau {% endblock %}
-        </div>
+        </section>
         <main>
-            <div class="recherche margin-bottom">{% block recherche %} recherche {% endblock %}</div>
-            <div class="main margin-bottom">{% block body %} MAIN {% endblock %}</div>
+            <section class="recherche section">{% block recherche %} recherche {% endblock %}</section>
+            <section class="main section">{% block body %} MAIN {% endblock %}</section>
         </main>
     </div>
 </div>
