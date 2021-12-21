@@ -19,7 +19,7 @@ class HomeController extends AbstractController
         $repository = $entityManager->getRepository(Categorie::class);
         $categories = $repository->findAll();
 
-        return $this->render('home/index.html.twig', [
+        return $this->render('base.html.twig', [
             'categories' => $categories,
         ]);
     }

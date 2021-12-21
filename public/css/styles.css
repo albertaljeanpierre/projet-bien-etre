@@ -12,17 +12,16 @@ body {
 ul {
     list-style-type: none;
 }
-
+.slider {
+    padding: 0;
+}
 
 
 .identification {
     background: #33C3F0;
     min-height: 20vh;
 }
-.bandeau {
-    background: tomato;
-    min-height: 40vh;
-}
+
 .footer {
     background: goldenrod;
 }

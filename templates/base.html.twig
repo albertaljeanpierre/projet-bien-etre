@@ -2,29 +2,80 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>{% block title %}Welcome!{% endblock %}</title>
+    <title>{% block title %} Annuaire du Bien être {% endblock %}</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
     {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
     {% block stylesheets %}
         {{ encore_entry_link_tags('app') }}
         <link rel="stylesheet" href="{{ asset('css/normalize.css') }}">
         <link rel="stylesheet" href="{{ asset('css/skeleton.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/slider.css') }}">
         <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
     {% endblock %}
 
     {% block javascripts %}
         {{ encore_entry_script_tags('app') }}
+        <script src="{{ asset('js/jssor.slider-28.1.0.min.js') }}"></script>
+        <script src="{{ asset('js/slider.js') }}"></script>
     {% endblock %}
 </head>
 <body>
 <div class="row">
     <div class="three columns ">
         <section class="identification section"> {% block identification %} Identification {% endblock %} </section>
-        <section class="service section"> {% block service %} Catégorie de service {% endblock %} </section>
+        <section class="service section"> {% block service %} {{ include('home/index.html.twig') }} {% endblock %} </section>
     </div>
     <div class="nine columns ">
-        <section class="bandeau section">
-        {% block bandeau %} Bandeau {% endblock %}
+        <section class=" section slider">
+        {% block bandeau %}
+
+            <div id="jssor_1" style="position:relative;margin:0 auto;padding: 0;top:0px;left:0px;width:980px;height:380px;overflow:hidden;visibility:hidden;">
+                <!-- Loading Screen -->
+                <div data-u="loading" class="jssorl-004-double-tail-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
+                    <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="{{ asset('images/double-tail-spin.svg') }}" />
+                </div>
+                <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:980px;height:380px;overflow:hidden;">
+                    <div style="background-color:#000000;">
+                        <img data-u="image" style="opacity:0.5;" src="{{ asset('images/px-action-athlete-athletes-848618-image.jpg') }}" />
+                    </div>
+                    <div>
+                        <img data-u="image" src="{{ asset('images/px-beach-daylight-fun-1430675-image.jpg')}}" />
+                    </div>
+                    <div>
+                        <img data-u="image" src="{{ asset('images/px-fun-man-person-2361598-image.jpg') }}" />
+                    </div>
+                    <div style="background-color:#000000;">
+                        <img data-u="image" style="opacity:0.5;" src="{{ asset('images/faded-monaco-scenery-evening-dark-picjumbo-com-image.jpg') }}" />
+                    </div>
+                    <div>
+                        <img data-u="image" src="{{ asset('images/px-bloom-blossom-flora-65219-image.jpg') }}" />
+                    </div>
+                </div>
+                <!-- Bullet Navigator -->
+                <div data-u="navigator" class="jssorb031" style="position:absolute;bottom:16px;right:16px;" data-autocenter="1" data-scale="0.5" data-scale-bottom="0.75">
+                    <div data-u="prototype" class="i" style="width:13px;height:13px;">
+                        <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                            <circle class="b" cx="8000" cy="8000" r="5800"></circle>
+                        </svg>
+                    </div>
+                </div>
+                <!-- Arrow Navigator -->
+                <div data-u="arrowleft" class="jssora051" style="width:55px;height:55px;top:0px;left:25px;" data-autocenter="2" data-scale="0.75" data-scale-left="0.75">
+                    <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                        <polyline class="a" points="11040,1920 4960,8000 11040,14080 "></polyline>
+                    </svg>
+                </div>
+                <div data-u="arrowright" class="jssora051" style="width:55px;height:55px;top:0px;right:25px;" data-autocenter="2" data-scale="0.75" data-scale-right="0.75">
+                    <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                        <polyline class="a" points="4960,1920 11040,8000 4960,14080 "></polyline>
+                    </svg>
+                </div>
+            </div>
+            <script type="text/javascript">jssor_1_slider_init();
+            </script>
+            <!-- #endregion Jssor Slider End -->
+
+        {% endblock %}
         </section>
         <main>
             <section class="recherche section">{% block recherche %} recherche {% endblock %}</section>

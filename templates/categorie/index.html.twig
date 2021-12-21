@@ -1,9 +1,17 @@
 {% extends 'base.html.twig' %}
 
-{#{% block title %}Hello CategorieController!{% endblock %}#}
 
-{% block service %}
+{% block title %}Description de la catégorie {{ categorie.nom }}{% endblock %}
+
+{% block body%}
+
+    <div class="row">
+        <div class="three columns"><img src="https://picsum.photos/200/200" alt=""></div>
+        <div class="nine columns">
+                <h2>{{ categorie.nom }}</h2>
+                <p>{{ categorie.description }}</p>
+        </div>
+    </div>
 
 
- <p>Exemple de service </p>
 {% endblock %}
