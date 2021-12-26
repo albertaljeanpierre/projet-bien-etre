@@ -1,9 +1,17 @@
-
 /* Style Général du site */
-
+@font-face {
+    font-family: 'DancingScript';
+    src:  url('polices/DancingScript-VariableFont_wght.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Pacifico';
+    src:  url('polices/Pacifico-Regular.ttf') format('truetype');
+}
 body {
-    background: palevioletred;
+    background-color: rgba(94, 190, 224, 0.5);
     padding: 15px;
+    font-family: 'DancingScript';
+    font-size: 2rem;
 }
 .section{
     margin-bottom: 20px;
@@ -15,6 +23,11 @@ ul {
 .slider {
     padding: 0;
 }
+.titre-general {
+    font-family: 'Pacifico';
+    text-decoration: underline;
+}
+
 
 
 .identification {
@@ -29,10 +42,9 @@ ul {
     background: saddlebrown;
 }
 .recherche {
-    background: firebrick;
-    min-height: 20vh;
+
 }
-.service {
+.categorie {
     background: crimson;
     min-height: 80vh;
 }

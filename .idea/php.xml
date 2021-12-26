@@ -133,6 +133,10 @@
       <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher-contracts" />
       <path value="$PROJECT_DIR$/vendor/symfony/http-kernel" />
       <path value="$PROJECT_DIR$/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/vendor/sabre/uri" />
+      <path value="$PROJECT_DIR$/vendor/elao/accesseo" />
+      <path value="$PROJECT_DIR$/vendor/brick/structured-data" />
+      <path value="$PROJECT_DIR$/vendor/brick/schema" />
     </include_path>
   </component>
   <component name="PhpUnit">

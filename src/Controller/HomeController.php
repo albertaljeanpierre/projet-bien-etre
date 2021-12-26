@@ -16,11 +16,10 @@ class HomeController extends AbstractController
      */
     public function index(EntityManagerInterface $entityManager): Response
     {
-        $repository = $entityManager->getRepository(Categorie::class);
-        $categories = $repository->findAll();
+
 
         return $this->render('base.html.twig', [
-            'categories' => $categories,
+
         ]);
     }
 }

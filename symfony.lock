@@ -1,4 +1,10 @@
 {
+    "brick/schema": {
+        "version": "0.1.1"
+    },
+    "brick/structured-data": {
+        "version": "0.1.1"
+    },
     "composer/package-versions-deprecated": {
         "version": "1.11.99.4"
     },
@@ -85,6 +91,9 @@
     "egulias/email-validator": {
         "version": "3.1.2"
     },
+    "elao/accesseo": {
+        "version": "v1.0.0-beta.2"
+    },
     "friendsofphp/proxy-manager-lts": {
         "version": "v1.0.5"
     },
@@ -164,6 +173,9 @@
     },
     "psr/log": {
         "version": "1.1.4"
+    },
+    "sabre/uri": {
+        "version": "2.2.2"
     },
     "sebastian/cli-parser": {
         "version": "1.0.1"

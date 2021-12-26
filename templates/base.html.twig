@@ -23,7 +23,11 @@
 <div class="row">
     <div class="three columns ">
         <section class="identification section"> {% block identification %} Identification {% endblock %} </section>
-        <section class="service section"> {% block service %} {{ include('home/index.html.twig') }} {% endblock %} </section>
+        <section class="categorie section">
+            {% block categorie %}
+                {{ render(controller('App\\Controller\\ListeCategorieController::listeCategorie')) }}
+            {% endblock %}
+        </section>
     </div>
     <div class="nine columns ">
         <section class=" section slider">
@@ -78,7 +82,33 @@
         {% endblock %}
         </section>
         <main>
-            <section class="recherche section">{% block recherche %} recherche {% endblock %}</section>
+            <section class="recherche section">
+                {% block recherche %}
+                    <h2 class="titre-general">Recherche</h2>
+                    <form method="post">
+                        <div class="row">
+                            <div class="six columns">
+                        <label class="u-full-width"for="cp">Code postal</label>
+                        <input class="u-full-width" type="text" name="cp" id="cp">
+                            </div>
+                            <div class="six columns">
+                        <label for="localite">Localité</label>
+                        <input class="u-full-width" type="text" name="localite" id="localite">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="six columns">
+                        <label for="commune">Commune</label>
+                        <input class="u-full-width" type="text" name="commune" id="commune">
+                            </div>
+                            <div class="six columns">
+                                <br>
+                        <input type="submit" class="button-primary u-pull-right" value="Rechercher un prestataire">
+                            </div>
+                        </div>
+
+                    </form>
+                {% endblock %}</section>
             <section class="main section">{% block body %} MAIN {% endblock %}</section>
         </main>
     </div>

@@ -1,0 +1,13 @@
+{# Ce twig n'extend de rien puisque inclus dans le template grace au controleur qui l'appelle #}
+{# C'est à dire que le controleur affiche ce twig. #}
+{# source https://symfony.com/doc/4.1/templating/embedding_controllers.html  #}
+
+
+    <h2 class="titre-general">Les catégories</h2>
+    <p>Choisissez une catégorie</p>
+    <ul>
+        {% for categorie in categories %}
+            <li>{{ categorie.nom }}</li>
+        {% endfor %}
+    </ul>
+
