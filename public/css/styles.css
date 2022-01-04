@@ -1,4 +1,8 @@
 /* Style Général du site */
+
+:root {
+    --main-color: #33C3F0;
+}
 @font-face {
     font-family: 'DancingScript';
     src:  url('polices/DancingScript-VariableFont_wght.ttf') format('truetype');
@@ -11,7 +15,7 @@ body {
     background-color: rgba(94, 190, 224, 0.5);
     padding: 15px;
     font-family: 'DancingScript';
-    font-size: 2rem;
+    font-size: 2.2rem;
 }
 .section{
     margin-bottom: 20px;
@@ -25,11 +29,27 @@ ul {
 }
 .titre-general {
     font-family: 'Pacifico';
-    text-decoration: underline;
+    text-decoration: underline var(--main-color);
+}
+
+/* Liste des catégories  */
+/*************************/
+
+.liste-categorie a {
+    text-decoration: none;
+    color: #000000;
+    transition: padding-left 1s;
+}
+.liste-categorie a:focus , .liste-categorie a:hover {
+    text-decoration: underline var(--main-color);
+    box-shadow: inset 4px 0 0 var(--main-color);
+    padding-left: 10px;
+    transition: padding-left .7s;
 }
 
 
 
+/**************************/
 .identification {
     background: #33C3F0;
     min-height: 20vh;
@@ -37,14 +57,4 @@ ul {
 
 .footer {
     background: goldenrod;
-}
-.main {
-    background: saddlebrown;
-}
-.recherche {
-
-}
-.categorie {
-    background: crimson;
-    min-height: 80vh;
 }

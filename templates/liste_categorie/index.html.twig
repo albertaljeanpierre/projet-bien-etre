@@ -4,10 +4,9 @@
 
 
     <h2 class="titre-general">Les catégories</h2>
-    <p>Choisissez une catégorie</p>
-    <ul>
+    <ul class="liste-categorie">
         {% for categorie in categories %}
-            <li>{{ categorie.nom }}</li>
+            <li><a href="{{ path('categorie' ,  { id:categorie.id }  ) }}">{{ categorie.nom }}</a></li>
         {% endfor %}
     </ul>
 

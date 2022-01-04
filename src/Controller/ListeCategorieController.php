@@ -14,7 +14,9 @@ class ListeCategorieController extends AbstractController
     public function listeCategorie(EntityManagerInterface $entityManager): Response
     {
         $repository = $entityManager->getRepository(Categorie::class);
-        $categories = $repository->findAll();
+        // La méthode findBy est identique à finAll si ce n'est que l'on peut y passer des paramètres.
+        // La méthode findAll utilise d'ailleur findBy avec des paramètre par défaut. ==> findBy([]);
+        $categories = $repository->findBy(array(),array('nom' => 'ASC'));
         return $this->render('liste_categorie/index.html.twig', [
             'categories' => $categories,
         ]);
