@@ -46,7 +46,54 @@ ul {
     padding-left: 10px;
     transition: padding-left .7s;
 }
+.liste-categorie li {
+    display: flex;
+    align-items:  center;
+    position: relative;
+}
+.liste-categorie a {
+    flex: 1;
+}
+.liste-categorie .description {
 
+}
+.liste-categorie .interogation {
+    height: 30px;
+    width: 30px;
+    border: 1px solid var(--main-color);
+    border-radius: 50%;
+    margin-right: 10px;
+    justify-content: center;
+    align-items:  center;
+    display: flex;
+    font-size: 150%;
+    font-weight: bold;
+    color: var(--main-color);
+    cursor:help;
+}
+.liste-categorie aside {
+    position: absolute;
+    left: -9999px;
+}
+.triangle{
+    width: 0;
+    height: 0;
+    border-width: 20px 34.6px 20px 0;
+    border-color: transparent #000 transparent transparent;
+    border-style: solid;
+    position: absolute;
+    top: 0;
+    left: -34px;
+}
+.liste-categorie .interogation:hover ~ aside {
+    left: 300px;
+    top : 0;
+    min-width: 370px;
+    color: #fff;
+    background: #000;
+    border-radius: 0 5px 5px 5px;
+    padding: 5px;
+}
 
 
 /**************************/

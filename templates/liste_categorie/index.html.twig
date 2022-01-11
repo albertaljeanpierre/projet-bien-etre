@@ -6,7 +6,10 @@
     <h2 class="titre-general">Les catégories</h2>
     <ul class="liste-categorie">
         {% for categorie in categories %}
-            <li><a href="{{ path('categorie' ,  { id:categorie.id }  ) }}">{{ categorie.nom }}</a></li>
+            <li>
+                <a href="{{ path('categorie' ,  { id:categorie.id }  ) }}">{{ categorie.nom }}</a>
+                <div class="description"><div class="interogation">?</div><aside><div class="triangle"></div> {{ categorie.description}}  </aside></div>
+            </li>
         {% endfor %}
     </ul>
 
